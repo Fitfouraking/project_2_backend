@@ -12,6 +12,14 @@ class BeersController < ApplicationController
     render json: @beers
   end
 
+  def show_name
+    fuzzy = FuzzyMatch.new(Beer.all, :read => :name)
+    @beer = fuzzy.find(params[:name])
+
+    # @beer = Location.find_by name: params[:name]
+    render json: @beer
+  end
+
   def create #POST
     @beer = Beer.new(beer_params)
     if @beer.save

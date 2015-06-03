@@ -12,6 +12,16 @@ class LocationsController < ApplicationController
     render json: @locations
   end
 
+  def show_name
+    fuzzy = FuzzyMatch.new(Location.all, :read => :name)
+    @location = fuzzy.find(params[:name])
+
+
+
+    # @location = Location.find_by name: params[:name]
+    render json: @location
+  end
+
   def create #POST
     @location = Location.new(location_params)
     if @location.save

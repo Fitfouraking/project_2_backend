@@ -14,8 +14,14 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  root 'locations#index'
-  resources :beers, :locations, except: [:new, :edit]
+  # root 'beers#index'
+
+  get '/beername' => 'beers#show_name'
+  get '/locationsname' => 'locations#show_name'
+  get  '/listlocations/:id' => 'lists#show_location'
+  get '/listbeers/:id' => 'lists#show_beers'
+
+  resources :beers, :locations, :lists, except: [:new, :edit]
 
   # Example resource route with options:
   #   resources :products do
