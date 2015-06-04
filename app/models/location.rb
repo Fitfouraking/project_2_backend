@@ -1,4 +1,3 @@
 class Location < ActiveRecord::Base
-  has_many :lists
-  has_many :beers, through: :lists
+  has_and_belongs_to_many :beers
 end

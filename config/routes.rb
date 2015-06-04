@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/locationsname' => 'locations#show_name'
   get  '/listlocations/:id' => 'lists#show_location'
   get '/listbeers/:id' => 'lists#show_beers'
+  post '/lists' => 'lists#create'
 
   resources :beers, :locations, :lists, except: [:new, :edit]
 

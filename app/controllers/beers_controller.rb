@@ -1,12 +1,5 @@
 class BeersController < ApplicationController
 
-#     beers GET    /beers(.:format)         beers#index
-#           POST   /beers(.:format)         beers#create
-#      beer GET    /beers/:id(.:format)     beers#show
-#           PATCH  /beers/:id(.:format)     beers#update
-#           PUT    /beers/:id(.:format)     beers#update
-#           DELETE /beers/:id(.:format)     beers#destroy
-
   def index #GET
     @beers = Beer.all
     render json: @beers

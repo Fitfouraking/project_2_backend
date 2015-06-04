@@ -1,13 +1,5 @@
 class ListsController < ApplicationController
 
-     #  lists GET    /lists(.:format)         lists#index
-     #      POST   /lists(.:format)         lists#create
-     # list GET    /lists/:id(.:format)     lists#show
-     #      PATCH  /lists/:id(.:format)     lists#update
-     #      PUT    /lists/:id(.:format)     lists#update
-     #      DELETE /lists/:id(.:format)     lists#destroy
-
-
 #only need post, get, & delete
   def create
     @list = List.new(list_params)
@@ -18,7 +10,7 @@ class ListsController < ApplicationController
     end
   end
 
-  def show_location #this needs to change to show_location and another method for show_beers
+  def show_location
      @list = List.where location_id: params[:id]
     render json: @list
   end
@@ -36,7 +28,7 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:beer_id, :location_id)
+    params.require(:list).permit(:beer_id, :location_id, :created_at, :updated_at)
   end
 
 end
