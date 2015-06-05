@@ -21,8 +21,10 @@ Rails.application.routes.draw do
   get  '/listlocations/:id' => 'lists#show_location'
   get '/listbeers/:id' => 'lists#show_beers'
   post '/lists' => 'lists#create'
+  post '/locations/:id/addbeer' => 'locations#add_beer'
+  delete '/location/:id/removebeer' => 'locations#remove_beer'
 
-  resources :beers, :locations, :lists, except: [:new, :edit]
+  # resources :beers, :locations, :lists, except: [:new, :edit]
 
   # Example resource route with options:
   #   resources :products do

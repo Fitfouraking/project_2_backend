@@ -1,12 +1,5 @@
 class LocationsController < ApplicationController
 
-# locations GET    /locations(.:format)     locations#index
-#           POST   /locations(.:format)     locations#create
-#  location GET    /locations/:id(.:format) locations#show
-#           PATCH  /locations/:id(.:format) locations#update
-#           PUT    /locations/:id(.:format) locations#update
-#           DELETE /locations/:id(.:format) locations#destroy
-
   def index #GET
     @locations = Location.all
     render json: @locations
@@ -31,6 +24,13 @@ class LocationsController < ApplicationController
     end
   end
 
+  def add_beer
+    @location = Location.find(params[:id])
+    @beer = Beer.find(params[:beer])
+    @location.beers << @beer
+    head :no_content
+  end
+
   def show #GET
     @location = Location.find(params[:id])
     render json: @location
@@ -45,9 +45,9 @@ class LocationsController < ApplicationController
     end
   end
 
-  def destroy #DELETE
-    @location = Location.find(params[:id])
-    @location.delete
+  def remove_beer #DELETE
+    @list = List.where(beer_id: params[:beer], location_id: params[:id]).first
+    @list.destroy
     head :no_content
   end
 
