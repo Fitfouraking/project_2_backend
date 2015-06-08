@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Beer.delete_all
-Location.delete_all
+Beer.destroy
+Location.destroy
 
 Beer.create!(name:'Bud Light', brewery:'A-B', style:'Light Lager', abv: 4.2)
 Beer.create!(name:'Heineken', brewery:'Heineken N.V.', style:'Euro Pale Lager', abv: 5.0)

@@ -12,7 +12,6 @@ class BeersController < ApplicationController
     fuzzy = FuzzyMatch.new(Beer.all, :read => :name)
     @beer = fuzzy.find(params[:name])
     # @beer = brewery_db.search.beers(q: @beer)
-
     # @beer = Location.find_by name: params[:name]
     render json: @beer
   end
