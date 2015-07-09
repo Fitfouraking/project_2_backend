@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post '/lists' => 'lists#create'
   post '/locations/:id/addbeer' => 'locations#add_beer'
   delete '/location/:id/removebeer' => 'locations#remove_beer'
+  get '/location/:id' => 'locations#show'
 
   # resources :beers, :locations, :lists, except: [:new, :edit]
 

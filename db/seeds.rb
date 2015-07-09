@@ -1,23 +1,68 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Beer.delete_all
+Location.delete_all
 
-Beer.destroy
-Location.destroy
-
+#BEERS
 Beer.create!(name:'Bud Light', brewery:'A-B', style:'Light Lager', abv: 4.2)
 Beer.create!(name:'Heineken', brewery:'Heineken N.V.', style:'Euro Pale Lager', abv: 5.0)
 Beer.create!(name:'Yuengling', brewery:'Yuengling', style:'American Amber', abv: 4.4)
 Beer.create!(name:'White Rascal', brewery:'Avery Brewing Company', style:'Wheat', abv: 5.6)
 Beer.create!(name:'Levity Amber Ale', brewery:'Odell Brewing Company', style:'Amber Ale', abv: 5.1)
 Beer.create!(name:'Grey Lady', brewery:'Cisco Brewers', style:'Witbier', abv: 4.5)
+Beer.create!(name:'Harpoon IPA', brewery:'Harpoon', style:'IPA', abv: 5.9)
+Beer.create!(name:'Jack\'s Abby Hopstitution #9', brewery:'Jack\'s Abby', style:'American Pale Lager', abv: 5.5)
+Beer.create!(name:'Pabst Blue Ribbon (PBR)', brewery:'Pabst Brewing Company', style:'Hippster Delight', abv: 4.7)
+Beer.create!(name:'Peak Organic Pale Ale', brewery:'Peak Organic', style:'Pale Ale', abv: 5.1)
+Beer.create!(name:'Rising Tide Maine Island Trail Ale', brewery:'Rising Tide', style:'American Pale Ale', abv: 4.3)
+Beer.create!(name:'Boston Lager', brewery:'Samuel Adams', style:'Amber Lager', abv: 4.9)
+Beer.create!(name:'Stone IPA', brewery:'Stone', style:'IPA', abv: 6.9)
+Beer.create!(name:'Traveler\'s Illusive Shandy', brewery:'Traveler\'s', style:'Shandy', abv: 4.4)
+Beer.create!(name:'Smithwick\'s', brewery:'Smithwick\'s', style:'Amber Ale', abv: 5.0)
+Beer.create!(name:'Dogfish Head 60 Minute', brewery:'Dogfish Head', style:'IPA', abv: 6.0)
+Beer.create!(name:'Magic Hat #9', brewery:'Magic Hat', style:'IPA', abv: 5.1)
+Beer.create!(name:'Coors Light', brewery:'Coors', style:'Light Lager', abv: 4.2)
+Beer.create!(name:'Peroni', brewery:'Peroni Nastro Azzurro', style:'Pale Lager', abv: 4.7)
+Beer.create!(name:'Stella Artois', brewery:'A-B', style:'Pilsner', abv: 5.2)
+Beer.create!(name:'Allagash White', brewery:'Allagash', style:'White Ale', abv: 5.0)
+Beer.create!(name:'Blue Moon', brewery:'Coors', style:'White Ale', abv: 5.4)
+Beer.create!(name:'Clown Shoes Clementine', brewery:'Clown Shoes', style:'White Ale', abv: 6.0)
+Beer.create!(name:'Shock Top', brewery:'Shock Top', style:'White Ale', abv: 5.2)
+Beer.create!(name:'Guiness Stout', brewery:'Guiness', style:'Dry Stout', abv: 5.0)
+Beer.create!(name:'Left Hand Milk Stout', brewery:'Left Hand', style:'Sweet Stout', abv: 6.0)
+Beer.create!(name:'Budweiser', brewery:'A-B', style:'Pale Lager', abv: 5.0)
+Beer.create!(name:'Dos Equis Lager', brewery:'Dos Equis', style:'Pale Lager', abv: 4.5)
 
 
+# LOCATIONS
 Location.create!(name:'Luckys Lounge', address:'355 Congress Street Boston, MA 02210')
 Location.create!(name:'Atlantic Beer Garden', address:'383 Congress Street Boston, MA 02110')
 Location.create!(name:'Trade', address:'540 Atlantic Ave Boston, MA 02110')
 Location.create!(name:'Blue Dragon', address:'324 A Street Boston, MA 02210')
+Location.create!(name:'The Beehive', address:'541 Tremont Street Boston, MA')
+Location.create!(name:'Drink', address:'348 Congress Street Boston, MA')
+Location.create!(name:'Eastern Standard', address:'528 Commonwealth Ave Boston, MA')
+Location.create!(name:'Lucca', address:'226 Hanover Street Boston, MA')
+Location.create!(name:'Toro', address:'1704 Washington Street Boston, MA')
+Location.create!(name:'JM Curley', address:'21 Temple Place Boston, MA 02111')
+Location.create!(name:'Scholars', address:'25 School Street Boston, MA 02108')
+Location.create!(name:'Beantown Pub', address:'100 Tremont Street Boston, MA 02108')
+Location.create!(name:'GEM', address:'42 Province Street Boston, MA 02108')
+Location.create!(name:'Vito\'s Tavern', address:'54 Salem Street Boston, MA 02113')
+Location.create!(name:'Corner Tavern', address:'421 Marlborough Street Boston, MA 02115')
+Location.create!(name:'Red Lantern', address:'39 Stanhope Street Boston, MA 02116')
+Location.create!(name:'Clerys Bar & Restaurant', address:'113 Dartmouth Street Boston, MA 02116')
+Location.create!(name:'The Rattlesnake Bar & Grill', address:'384 Boylston Street Boston, MA 02116')
+Location.create!(name:'Storyville', address:'90 Exeter Street Boston, MA 02116')
+Location.create!(name:'Lir Irish Pub', address:'903 Boylston Street Boston, MA 02115')
+Location.create!(name:'The Granary Tavern', address:'170 Milk Street Boston, MA 02109')
+Location.create!(name:'The Landing', address:'1 Long Wharf Boston, MA 02110')
+Location.create!(name:'Slate Bar & Grill', address:'109 High Street Boston, MA 02110')
+Location.create!(name:'The Living Room', address:'101 Atlantic Ave Boston, MA 02110')
+Location.create!(name:'Stephi\'s In Southie', address:'130 Dorchester Ave Boston, MA 02127')
+Location.create!(name:'Whiskey Priest', address:'150 Northern Ave Boston, MA 02210')
+Location.create!(name:'Legal Harborside', address:'270 Northern Ave Boston, MA 02210')
+Location.create!(name:'Barcelona Wine Bar', address:'525 Tremont Street Boston, MA 02116')
+Location.create!(name:'Tip Tap Room', address:'138 Cambridge Street Boston, MA 02114')
+Location.create!(name:'Trophy Room', address:'26 Chandler Street Boston, MA 02116')
+Location.create!(name:'Beacon Hill Pub', address:'149 Charles Street Boston, MA 02108')
+Location.create!(name:'Parish Cafe', address:'493 Mass Ave Boston, MA 02118')
+Location.create!(name:'Aquitaine', address:'569 Tremont Street Boston, MA 02118')
